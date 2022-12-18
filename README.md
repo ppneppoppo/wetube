@@ -1,6 +1,6 @@
 #Wetube Reloaded
 
-/ -> See join -> Join /login -> Login /search -> Search
+
 
 /users/:id -> See User /users/logout -> LogOut /users/edit -> Edit My Profile /users/delete -> Delete My Profile
 
