@@ -14,8 +14,8 @@
         "build:assets": "webpack --mode=production",
         "dev:assets": "webpack --mode=development -w"
     },
-    "author": "MINJI",
-    "license": "MIT",
+    "author": "JUNGMIN",
+    "license": "KB",
     "bugs": {
         "url": "https://github.com/ppneppoppo/wetube"
     },
