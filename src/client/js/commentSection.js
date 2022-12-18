@@ -1,7 +1,6 @@
 const videoContainer = document.getElementById("videoContainer");
 const form = document.getElementById("commentForm");
 
-const addComment = (text) => {
 const addComment = (text, id) => {
   const videoComments = document.querySelector(".video__comments ul");
   const newComment = document.createElement("li");
@@ -27,7 +26,6 @@ const handleSubmit = async (event) => {
   if (text === "") {
     return;
   }
-  const { status } = await fetch(`/api/videos/${videoId}/comment`, {
   const response = await fetch(`/api/videos/${videoId}/comment`, {
     method: "POST",
     headers: {
@@ -35,9 +33,6 @@ const handleSubmit = async (event) => {
     },
     body: JSON.stringify({ text }),
   });
-  textarea.value = "";
-  if (status === 201) {
-    addComment(text);
   if (response.status === 201) {
     textarea.value = "";
     const { newCommentId } = await response.json();
